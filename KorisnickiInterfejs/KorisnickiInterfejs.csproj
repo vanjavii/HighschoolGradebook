@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34F1A5AA-A86D-4DE7-96F1-58D61C30B5B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KorisnickiInterfejs</RootNamespace>
+    <AssemblyName>KorisnickiInterfejs</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\ServerCommunicationException.cs" />
+    <Compile Include="Exceptions\SystemOperationException.cs" />
+    <Compile Include="FrmAddStudentToClassGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddStudentToClassGroup.Designer.cs">
+      <DependentUpon>FrmAddStudentToClassGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddClass.Designer.cs">
+      <DependentUpon>FrmAddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddMark.Designer.cs">
+      <DependentUpon>FrmAddMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddTeacherOnSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddTeacherOnSubject.Designer.cs">
+      <DependentUpon>FrmAddTeacherOnSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConcludedMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConcludedMarks.Designer.cs">
+      <DependentUpon>FrmConcludedMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMyProfile.Designer.cs">
+      <DependentUpon>FrmMyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuccessReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuccessReport.Designer.cs">
+      <DependentUpon>FrmSuccessReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIController\AddClassGroupController.cs" />
+    <Compile Include="GUIController\AddStudentWithValidationController.cs" />
+    <Compile Include="GUIController\AddSubjectController.cs" />
+    <Compile Include="GUIController\AddTeacherWithValidationController.cs" />
+    <Compile Include="GUIController\ChangeStudentController.cs" />
+    <Compile Include="GUIController\FindClassgroupController.cs" />
+    <Compile Include="GUIController\StudentsFromClassGroupController.cs" />
+    <Compile Include="GUIController\_LoginController.cs" />
+    <Compile Include="GUIController\SubjectInfoController.cs" />
+    <Compile Include="GUIController\TeachersBySubjectController.cs" />
+    <Compile Include="GUIController\_AddClassController.cs" />
+    <Compile Include="GUIController\_AddMarkController.cs" />
+    <Compile Include="GUIController\_AddStudentToClassGroupController.cs" />
+    <Compile Include="GUIController\_AddTeacherOnSubjectController.cs" />
+    <Compile Include="GUIController\_ConcludedMarksController.cs" />
+    <Compile Include="GUIController\_MainController.cs" />
+    <Compile Include="GUIController\_MyProfileController.cs" />
+    <Compile Include="GUIController\_SuccessReportController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerCommunication\Communication.cs" />
+    <Compile Include="UserControls\UCAddClassGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddClassGroup.Designer.cs">
+      <DependentUpon>UCAddClassGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCAddStudentWithValidation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddStudentWithValidation.Designer.cs">
+      <DependentUpon>UCAddStudentWithValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCAddSubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddSubject.Designer.cs">
+      <DependentUpon>UCAddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCAddTeacherWithValidation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddTeacherWithValidation.Designer.cs">
+      <DependentUpon>UCAddTeacherWithValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCChangeStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCChangeStudent.Designer.cs">
+      <DependentUpon>UCChangeStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCFindClassgroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCFindClassgroup.Designer.cs">
+      <DependentUpon>UCFindClassgroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCStudentsFromClassGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCStudentsFromClassGroup.Designer.cs">
+      <DependentUpon>UCStudentsFromClassGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCSubjectInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSubjectInfo.Designer.cs">
+      <DependentUpon>UCSubjectInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTeachersBySubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCTeachersBySubject.Designer.cs">
+      <DependentUpon>UCTeachersBySubject.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAddStudentToClassGroup.resx">
+      <DependentUpon>FrmAddStudentToClassGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddClass.resx">
+      <DependentUpon>FrmAddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddMark.resx">
+      <DependentUpon>FrmAddMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddTeacherOnSubject.resx">
+      <DependentUpon>FrmAddTeacherOnSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConcludedMarks.resx">
+      <DependentUpon>FrmConcludedMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMyProfile.resx">
+      <DependentUpon>FrmMyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuccessReport.resx">
+      <DependentUpon>FrmSuccessReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\UCAddClassGroup.resx">
+      <DependentUpon>UCAddClassGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAddStudentWithValidation.resx">
+      <DependentUpon>UCAddStudentWithValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAddSubject.resx">
+      <DependentUpon>UCAddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAddTeacherWithValidation.resx">
+      <DependentUpon>UCAddTeacherWithValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCChangeStudent.resx">
+      <DependentUpon>UCChangeStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCFindClassgroup.resx">
+      <DependentUpon>UCFindClassgroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCStudentsFromClassGroup.resx">
+      <DependentUpon>UCStudentsFromClassGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCSubjectInfo.resx">
+      <DependentUpon>UCSubjectInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCTeachersBySubject.resx">
+      <DependentUpon>UCTeachersBySubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Domain.Absence.datasource" />
+    <None Include="Properties\DataSources\Domain.Class.datasource" />
+    <None Include="Properties\DataSources\Domain.ClassGroupDatabase.datasource" />
+    <None Include="Properties\DataSources\Domain.Mark.datasource" />
+    <None Include="Properties\DataSources\Domain.Student.datasource" />
+    <None Include="Properties\DataSources\Domain.Subject.datasource" />
+    <None Include="Properties\DataSources\Domain.Teacher.datasource" />
+    <None Include="Properties\DataSources\Domain.User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationLogic\ApplicationLogic.csproj">
+      <Project>{9E2C8023-61E6-428A-B851-2F6394D07BAF}</Project>
+      <Name>ApplicationLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{6786a0fa-34fa-46a6-aea5-0c1fe13b7362}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{C8A10F76-5B3C-4ED0-99B1-AD0EEDE947AA}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School hallway.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hallway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastel blue1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
